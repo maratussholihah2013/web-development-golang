@@ -1,17 +1,19 @@
 package main
 
 import (
-	"html/template"
 	"log"
 	"os"
+	"text/template"
 )
 
+var tpl *template.Template
+
+func init() {
+	tpl = template.Must(template.ParseFiles("./main.html"))
+}
+
 func main() {
-	tpl, err := template.ParseFiles("./main.html")
-	if err != nil {
-		log.Fatalln(err)
-	}
-	err = tpl.Execute(os.Stdout, nil)
+	err := tpl.ExecuteTemplate(os.Stdout, "main.html", 100)
 	if err != nil {
 		log.Fatalln(err)
 	}

@@ -5,6 +5,7 @@
         <title> Toktok</title>
     </head>
     <body>
-        <h1>Input angka yang diinginkan: {{.}} </h1>
+        {{ $wisdom := .}}
+        <h1>Today's quote: {{$wisdom}} </h1>
     </body>
 </html>

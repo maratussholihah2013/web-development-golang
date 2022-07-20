@@ -36,7 +36,9 @@ type items struct {
 }
 
 func init() {
-	tpl = template.Must(template.New("parsingfunction.html").Funcs(fm).ParseFiles("./parsingfunction.html"))
+	//tpl = template.Must(template.New("parsingfunction.html").Funcs(fm).ParseFiles("./parsingfunction.html"))
+	tpl = template.Must(template.ParseFiles("./parsingfunction.html"))
+	tpl = tpl.Funcs()
 }
 
 func main() {

@@ -7,9 +7,10 @@
     <body>
         <h1> Composite data </h1>
         <ul>
-            {{range $index, $element := .}}
-            <li>{{ $index }} - {{ $element }}</li>
-            {{ end }}
+            {{$x := .Nama}}
+            {{$y := .Daerah}}
+            {{$z := .Tingkat}}
+            <li>{{ $x }} - {{ $y }} - {{ $z }}</li>
         </ul>
     </body>
 </html>

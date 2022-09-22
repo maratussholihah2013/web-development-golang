@@ -8,18 +8,18 @@ import (
 
 var tpl *template.Template
 
-type paud struct {
+type school struct {
 	Nama    string
 	Daerah  string
 	Tingkat string
 }
 
 func init() {
-	tpl = template.Must(template.ParseFiles("./parsingstruct.html"))
+	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 
 func main() {
-	sekolah := paud{
+	sekolah := school{
 		Nama:    "Starbright",
 		Daerah:  "Mekarwangi",
 		Tingkat: "PAUD",

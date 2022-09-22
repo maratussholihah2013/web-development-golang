@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Functions</title>
+    </head>
+    <body>
+        {{ if gt .Score1 .Score2}}
+            Score 1 > Score 2
+        {{ end }}
+        
+        {{ if lt .Score1 .Score2}}
+            Score 1 < Score 2
+        {{ end }}
+
+        {{ if eq .Score1 .Score2}}
+            Score 1 = Score 2
+        {{ end }}
+
+        {{if eq 5 .Score1}}
+            Score 1 = 5
+        {{ end }}
+    </body>
+</html>

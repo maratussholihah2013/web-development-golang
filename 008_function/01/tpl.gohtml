@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Functions</title>
+    </head>
+    <body>
+        <h1> Sekolah </h1>
+        <ul>
+            {{ range .Sekolah}}
+            <li>{{ .Nama }} - {{uc .Daerah }} - {{ .Tingkat }}</li>
+            {{ end }}
+        </ul>
+        <h1> Seragam </h1>
+        <ul>
+            {{ range .Seragam}}
+            <li>{{ .Warna }} - {{ft .Jenis }} - {{ .Level }}</li>
+            {{ end }}
+        </ul>
+    </body>
+</html>

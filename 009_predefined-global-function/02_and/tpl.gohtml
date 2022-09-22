@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Functions</title>
+    </head>
+    <body>
+        Contoh 1
+        {{range .}}
+            {{ . }}
+        {{end}}
+
+        Contoh 2
+        {{ if . }}
+            {{ . }}
+        {{ end }}
+
+        Contoh 3
+        {{range .}}
+            {{ if .Name}}
+                {{ . }}
+            {{ end }}
+        {{end}}
+
+        Contoh 4
+        {{range .}}
+            {{if and .Name .Admin}}
+                Name: {{.Name}}
+                Motto: {{.Motto}}
+                Admin: {{.Admin}}
+            {{end}}
+        {{end}}
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 3</title>
+</head>
+<body>
+
+{{range .}}
+    {{.Jenis}}
+    {{range .Items}}
+    {{.Nama}} {{.Description}} {{.Harga}}
+    {{end}}
+{{end}}
+
+</body>
+</html>
